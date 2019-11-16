@@ -1,0 +1,32 @@
+<h2><%= @title %></h2>
+
+<div>
+    <ul>
+        <% @regulars.group_by { |e| e.period.date }.each do |date, events| %>
+        <li style='margin-bottom: 10px;'>
+            <a href='/ryosai2019/<%= date %>.html'><%= date %></a>
+            <ul>
+            <% events.each do |event| %>
+                <li><a href='/ryosai2019/<%= event.period.date %>.html#event<%= event.id %>'><%= event.title %></a></li>
+            <% end %>
+            </ul>
+        </li>
+        <% end %>
+        <li style='margin-bottom: 10px;'>
+            <a href='/ryosai2019/guerrilla.html'>ゲリラ企画</a>
+            <ul>
+            <% @guerrillas.each do |event| %>
+                <li><a href='/ryosai2019/guerrilla.html#event<%= event.id %>'><%= event.title %></a></li>
+            <% end %>
+            </ul>
+        </li>
+        <li style='margin-bottom: 10px;'>
+            <a href='/ryosai2019/permanent.html'>常設企画</a>
+            <ul>
+            <% @permanents.each do |event| %>
+                <li><a href='/ryosai2019/permanent.html#event<%= event.id %>'><%= event.title %></a></li>
+            <% end %>
+            </ul>
+        </li>
+    </ul>
+</div>
