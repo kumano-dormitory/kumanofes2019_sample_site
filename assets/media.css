@@ -10,7 +10,8 @@
         height: 45%;
     }
     img.event-image {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
     li {
         margin: 10px auto 5px auto
