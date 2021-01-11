@@ -22,7 +22,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     rmagick (2.16.0)
     yaml-front-matter (0.0.1)
 
